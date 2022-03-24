@@ -23,4 +23,14 @@ public class mainWeed1Test {
       assertFalse(mainWeed1.greaterZero(0));
    }
 
+   @Test
+   public void squareEasyTest(){
+      assertEquals(4, mainWeed1.square(2));
+   }
+
+   @Test
+   public void square_expect16_when4Test(){
+      assertEquals(16, mainWeed1.square(4));
+   }
+
 }

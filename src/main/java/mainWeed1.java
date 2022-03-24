@@ -27,4 +27,8 @@ public class mainWeed1 {
             return false;
         }
     }
+
+    public static int square(int number) {
+        return number *= number;
+    }
 }
