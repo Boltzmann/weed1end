@@ -13,4 +13,14 @@ public class mainWeed1Test {
       assertEquals("WeedWeedWeedWeedWeed", mainWeed1.nameL00p("Weed"));
    }
 
+   @Test
+   public void greaterZeroTestTrue(){
+      assertTrue(mainWeed1.greaterZero(1));
+   }
+
+   @Test
+   public void greaterZeroTestFalse(){
+      assertFalse(mainWeed1.greaterZero(0));
+   }
+
 }

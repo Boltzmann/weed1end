@@ -3,6 +3,8 @@ public class mainWeed1 {
 
         System.out.println(sayName("Marlin"));
         System.out.println("Hallo "+nameL00p("Stefan")+"!");
+        System.out.println(greaterZero(3));
+        System.out.println(greaterZero(-1));
     }
 
     public static String sayName(String name) {
@@ -16,5 +18,13 @@ public class mainWeed1 {
         }
         return names;
 
+    }
+
+    public static boolean greaterZero(int i) {
+        if (i > 0){
+            return true;
+        } else {
+            return false;
+        }
     }
 }
