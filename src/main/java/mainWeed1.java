@@ -27,4 +27,9 @@ public class mainWeed1 {
             return false;
         }
     }
+
+    public static String[] numberOneToTenAsWords() {
+        String[] numbersAsWords = {"Eins", "Zwei", "Drei", "Vier", "Fünf", "Sechs", "Sieben", "Acht", "Neun", "Zehn"};
+        return numbersAsWords;
+    }
 }

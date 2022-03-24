@@ -23,4 +23,10 @@ public class mainWeed1Test {
       assertFalse(mainWeed1.greaterZero(0));
    }
 
+   @Test
+   public void stringArrayOne2Ten() {
+      String[] expect = {"Eins", "Zwei", "Drei", "Vier", "Fünf", "Sechs", "Sieben", "Acht", "Neun", "Zehn"};
+      assertArrayEquals(expect, mainWeed1.numberOneToTenAsWords());
+   }
+
 }
