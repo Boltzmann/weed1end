@@ -2,6 +2,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 public class mainWeed1Test {
+
+   // +++ novice +++
    @Test
    public void nameTest() {
 
@@ -31,6 +33,16 @@ public class mainWeed1Test {
    @Test
    public void square_expect16_when4Test(){
       assertEquals(16, mainWeed1.square(4));
+   }
+
+   // +++ intermediate +++
+   @Test
+   public void numToWord_expectVier_when4 () {
+      assertEquals("Vier", mainWeed1.numToWord(4));
+   }
+   @Test
+   public void numToWord_expectAcht_when8 () {
+      assertEquals("Acht", mainWeed1.numToWord(8));
    }
 
 }
