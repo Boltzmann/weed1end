@@ -32,4 +32,29 @@ public class mainWeed1 {
         String[] numbersAsWords = {"Eins", "Zwei", "Drei", "Vier", "Fünf", "Sechs", "Sieben", "Acht", "Neun", "Zehn"};
         return numbersAsWords;
     }
+
+    public static String simpleValueToWord(int number) {
+        switch(number) {
+            case 1:
+                return "Eins";
+            case 2:
+                return "Zwei";
+            case 3:
+                return "Drei";
+            case 4:
+                return "Vier";
+            case 5:
+                return "Fünf";
+            case 6:
+                return "Sechs";
+            case 7:
+                return "Sieben";
+            case 8:
+                return "Acht";
+            case 9:
+                return "Neun";
+            default:
+                return "";
+        }
+    }
 }

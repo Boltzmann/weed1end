@@ -29,4 +29,17 @@ public class mainWeed1Test {
       assertArrayEquals(expect, mainWeed1.numberOneToTenAsWords());
    }
 
+   @Test
+   public void simpleValueToWord_expectOne_when1() {
+      assertEquals("Eins", mainWeed1.simpleValueToWord(1));
+   }
+
+   @Test
+   public void simpleValueToWord_expectTwo_Nine_when2_9() {
+      String[] expect = {"Null","Eins", "Zwei", "Drei", "Vier", "Fünf", "Sechs", "Sieben", "Acht", "Neun", "Zehn"};
+      for (int i = 2; i < 10; i++) {
+         assertEquals(expect[i], mainWeed1.simpleValueToWord(i));
+      }
+   }
+
 }
