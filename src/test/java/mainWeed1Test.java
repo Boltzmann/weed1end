@@ -78,5 +78,4 @@ public class mainWeed1Test {
       String partOfExpected = "$95 #96 97 98 #99 $100";
       assertEquals(partOfExpected, mainWeed1.fizzbuzzInRange(95,100));
    }
-
 }

@@ -1,3 +1,7 @@
+import org.apache.commons.lang3.ArrayUtils;
+
+import java.util.Scanner;
+
 public class mainWeed1 {
     public static void main(String[] args) {
 
@@ -6,6 +10,7 @@ public class mainWeed1 {
         System.out.println(greaterZero(3));
         System.out.println(greaterZero(-1));
         System.out.println(fizzbuzzInRange(1,100));
+        qwertz();
     }
 
     public static String sayName(String name) {
@@ -60,5 +65,26 @@ public class mainWeed1 {
             }
         }
         return output.toString();
+    }
+
+    public static void stringArrayOut(String[] arr) {
+        System.out.println("Alle bisherigen Eingaben: ");
+        for (String word : arr) {
+            System.out.print(word + " ");
+        }
+        System.out.println();
+    }
+
+    public static void qwertz() {
+        Scanner scanner = new Scanner(System.in);
+
+        String[] wordList = new String[0];
+        String input = "";
+        while(!input.equals("q")) {
+            stringArrayOut(wordList);
+            System.out.println("Gib einen ein Wort ein ('q' beendet): ");
+            input = scanner.nextLine();
+            wordList = ArrayUtils.add(wordList, input);
+        }
     }
 }
