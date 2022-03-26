@@ -42,4 +42,41 @@ public class mainWeed1Test {
       }
    }
 
+   @Test
+   public void numbersDividableBy3_expRaute3_when3() {
+      assertEquals("#3", mainWeed1.fizzbuzz(3));
+   }
+
+   @Test
+   public void numbersDividableBy3_expRaute6_when6() {
+      assertEquals("#6", mainWeed1.fizzbuzz(6));
+   }
+
+   @Test
+   public void numbersDividableBy5_expDollar5_when5() {
+      assertEquals("$5", mainWeed1.fizzbuzz(5));
+   }
+
+   @Test
+   public void numbersDividableBy5_expDollar100_when100() {
+      assertEquals("$100", mainWeed1.fizzbuzz(100));
+   }
+
+   @Test
+   public void numbersDividableBy5And3_expRauteDollar15_when15() {
+      assertEquals("#$15", mainWeed1.fizzbuzz(15));
+   }
+
+   @Test
+   public void fizzbussInRangeOneToSix() {
+      String partOfExpected = "1 2 #3 4 $5 #6";
+      assertEquals(partOfExpected, mainWeed1.fizzbuzzInRange(1,6));
+   }
+
+   @Test
+   public void fizzbuzzInRangeOneToHundred() {
+      String partOfExpected = "$95 #96 97 98 #99 $100";
+      assertEquals(partOfExpected, mainWeed1.fizzbuzzInRange(95,100));
+   }
+
 }

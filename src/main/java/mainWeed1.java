@@ -5,6 +5,7 @@ public class mainWeed1 {
         System.out.println("Hallo "+nameL00p("Stefan")+"!");
         System.out.println(greaterZero(3));
         System.out.println(greaterZero(-1));
+        System.out.println(fizzbuzzInRange(1,100));
     }
 
     public static String sayName(String name) {
@@ -12,20 +13,11 @@ public class mainWeed1 {
     }
 
     public static String nameL00p(String name) {
-        String names = "";
-        for (int i = 0; i < 5; i++) {
-            names = names + name;
-        }
-        return names;
-
+        return String.valueOf(name).repeat(5);
     }
 
     public static boolean greaterZero(int i) {
-        if (i > 0){
-            return true;
-        } else {
-            return false;
-        }
+        return i > 0;
     }
 
     public static String[] numberOneToTenAsWords() {
@@ -34,27 +26,39 @@ public class mainWeed1 {
     }
 
     public static String simpleValueToWord(int number) {
-        switch(number) {
-            case 1:
-                return "Eins";
-            case 2:
-                return "Zwei";
-            case 3:
-                return "Drei";
-            case 4:
-                return "Vier";
-            case 5:
-                return "Fünf";
-            case 6:
-                return "Sechs";
-            case 7:
-                return "Sieben";
-            case 8:
-                return "Acht";
-            case 9:
-                return "Neun";
-            default:
-                return "";
+        return switch (number) {
+            case 1 -> "Eins";
+            case 2 -> "Zwei";
+            case 3 -> "Drei";
+            case 4 -> "Vier";
+            case 5 -> "Fünf";
+            case 6 -> "Sechs";
+            case 7 -> "Sieben";
+            case 8 -> "Acht";
+            case 9 -> "Neun";
+            default -> "";
+        };
+    }
+
+    public static String fizzbuzz(int i) {
+        if (i % 3 == 0) {
+            if (i % 5 == 0)
+                return "#$" + i;
+            return "#" + i;
+        } else if (i % 5 == 0) {
+            return "$" + i;
         }
+        return Integer.toString(i);
+    }
+
+    public static String fizzbuzzInRange(int from, int to) {
+        StringBuilder output = new StringBuilder();
+        for (int i = from; i <= to; i++) {
+            output.append(fizzbuzz(i));
+            if (i != to) {
+                output.append(" ");
+            }
+        }
+        return output.toString();
     }
 }
