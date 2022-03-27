@@ -41,4 +41,13 @@ public class Intermediate {
     public static String[] separateStringByComma(String toBeSeparated) {
         return toBeSeparated.split(",");
     }
+
+    public static int checksum(int number) {
+        char[] numberCharArray = Integer.toString(number).toCharArray();
+        int checksum = 0;
+        for (char c : numberCharArray) {
+            checksum += Character.getNumericValue(c);
+        }
+        return checksum;
+    }
 }

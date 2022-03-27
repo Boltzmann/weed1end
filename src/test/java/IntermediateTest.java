@@ -35,4 +35,8 @@ public class IntermediateTest {
         Assertions.assertEquals(" Teil2.", Intermediate.separateStringByComma(input)[1]);
     }
 
+    @Test
+    void checksumSmallNumber() {
+        Assertions.assertEquals(3, Intermediate.checksum(12));
+    }
 }
