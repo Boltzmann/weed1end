@@ -1,6 +1,7 @@
 import org.apache.commons.lang3.ArrayUtils;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Intermediate {
@@ -16,5 +17,25 @@ public class Intermediate {
             backwards = backwards.concat(String.valueOf(tmp));
         }
         return backwards;
+    }
+
+    public static int[] permute(int[] input, int back, int front) {
+        int tmp = input[back];
+        input[back] = input[front];
+        input[front] = tmp;
+        return input;
+    }
+
+    public static int[] pickOutSort(int[] input) {
+        for (int i = 0; i < input.length; i++) {
+            int minimum = i;
+            for(int a = i; a < input.length; a++) {
+                if (input[a] < input[minimum]) {
+                    minimum = a;
+                }
+            }
+            permute(input, i, minimum);
+        }
+        return input;
     }
 }
