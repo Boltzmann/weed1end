@@ -20,4 +20,19 @@ public class IntermediateTest {
         int[] expected = new int[]{2, 3, 6, 6, 8, 9};
         Assertions.assertArrayEquals(expected, Intermediate.pickOutSort(input));
     }
+
+    @Test
+    void separateStringByComma() {
+        String input = "Wort, Name.";
+        Assertions.assertEquals("Wort", Intermediate.separateStringByComma(input)[0]);
+        Assertions.assertEquals(" Name.", Intermediate.separateStringByComma(input)[1]);
+    }
+
+    @Test
+    void separateStringByComma2() {
+        String input = "Teil1, Teil2.";
+        Assertions.assertEquals("Teil1", Intermediate.separateStringByComma(input)[0]);
+        Assertions.assertEquals(" Teil2.", Intermediate.separateStringByComma(input)[1]);
+    }
+
 }

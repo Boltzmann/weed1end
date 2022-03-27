@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class Intermediate {
     public static void main(String[] args) {
-
     }
 
     public static String returnBackwards(@NotNull String string2revert) {
@@ -37,5 +36,9 @@ public class Intermediate {
             permute(input, i, minimum);
         }
         return input;
+    }
+
+    public static String[] separateStringByComma(String toBeSeparated) {
+        return toBeSeparated.split(",");
     }
 }
