@@ -1,10 +1,6 @@
-import org.apache.commons.lang3.ArrayUtils;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Arrays;
-import java.util.Scanner;
-
-public class Intermediate {
+public class ExpertExercises {
     public static void main(String[] args) {
     }
 
@@ -49,5 +45,37 @@ public class Intermediate {
             checksum += Character.getNumericValue(c);
         }
         return checksum;
+    }
+
+    public static String asRomanNumber(int integer) {
+        String romanNumber = "";
+        if(integer/100 > 0) {
+            romanNumber += "C".repeat(integer/100);
+            integer %= 100;
+        }
+        if(integer/50 > 0) {
+            romanNumber += "L".repeat(integer/50);
+            integer %= 50;
+        }
+        if(integer/10 > 0) {
+            romanNumber += "X".repeat(integer/10);
+            integer %= 10;
+        }
+        if(integer/5 > 0) {
+            romanNumber += "V".repeat(integer/5);
+            integer %= 5;
+        }
+        if(integer > 0) {
+            romanNumber += "I".repeat(integer);
+        }
+        return romanNumber;
+    }
+
+    public static String numberOccurencesOfIntAsLiterals(int integer, int romanIntToReplace, String romanLiteral) {
+        String replaced = "";
+        if(integer/romanIntToReplace > 0) {
+            replaced += romanLiteral.repeat(integer/romanIntToReplace);
+        }
+        return replaced;
     }
 }
